@@ -1,0 +1,400 @@
+// 过渡动画
+// 效果实现
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+// html
+// 初始布局样式
+html {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  /* 设置页面最小宽度 */
+  min-width: 710px;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  // height: 100%;
+  background-color: #f8f9fa;
+}
+
+// xx-display
+// 弹性布局
+.cc-display {
+  /*居中*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ce-display {
+  /*水平居中，垂直底部*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cs-display {
+  /*水平居中，垂直顶部*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sc-display {
+  /*水平左对齐，垂直居中*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ss-display {
+  /*水平左对齐，垂直顶部*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.se-display {
+  /*水平左对齐，垂直底部*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.es-display {
+  /*水平右对齐，垂直顶部*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.ec-display {
+  /*水平右对齐，垂直居中*/
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bc-display {
+  /* 水平分散对齐，垂直居中对齐 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 怪异盒模型
+// none
+.border-none {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//
+.page-middle {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px !important;
+  width: 100% !important;
+}
+
+// float
+// 浮动清除，外层高度自适应
+.clear-float {
+  clear: both;
+  height: 0;
+}
+
+// 内容控制
+// 宽度？
+.so_middle {
+  width: 100%;
+  max-width: 1400px;
+}
+
+// 滚动条
+// 样式设置
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  // border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #8a8b8c;
+  // border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); */
+  /* border-radius: 10px; */
+  // background: #d8d9da;
+  background: rgba(red, green, blue, 1);
+}
+
+// 不换行
+.moreinfo {
+  /* 保证文本内容不会自动换行，如果多余的内容会在水平方向撑破单元格 */
+  white-space: nowrap;
+  /* 隐藏超出单元格的部分 */
+  overflow: hidden;
+  /* 将被隐藏的那部分用省略号代替 */
+  text-overflow: ellipsis;
+}
+
+// span 最多1行
+.span-l-1 {
+  text-overflow: -o-ellipsis-lastline;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+// span 最多二行
+.span-l-2 {
+  text-overflow: -o-ellipsis-lastline;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// span 最多三行
+.span-l-3 {
+  text-overflow: -o-ellipsis-lastline;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// span 最多四行
+.span-l-4 {
+  text-overflow: -o-ellipsis-lastline;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+// span 最多6行
+.span-l-6 {
+  text-overflow: -o-ellipsis-lastline;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.font-s-12 {
+  font-size: 12px;
+}
+
+.font-s-14 {
+  font-size: 14px;
+}
+
+.font-s-15 {
+  font-size: 15px;
+}
+
+.font-s-16 {
+  font-size: 16px;
+}
+
+.font-s-18 {
+  font-size: 18px;
+}
+
+.font-s-19 {
+  font-size: 19px;
+}
+
+.font-s-20 {
+  font-size: 20px;
+}
+
+.font-s-22 {
+  font-size: 22px;
+}
+
+.font-s-24 {
+  font-size: 24px;
+}
+
+.font-s-26 {
+  font-size: 26px;
+}
+
+.font-s-28 {
+  font-size: 28px;
+}
+
+.font-s-32 {
+  font-size: 32px;
+}
+
+.font-s-36 {
+  font-size: 36px;
+}
+
+.font-w-3 {
+  font-weight: 300;
+}
+
+.font-w-4 {
+  font-weight: 400;
+}
+
+.font-w-6 {
+  font-weight: 600;
+}
+
+.font-w-8 {
+  font-weight: 800;
+}
+
+.font-ls-1 {
+  letter-spacing: 1px;
+}
+
+.font-ls-2 {
+  letter-spacing: 2px;
+}
+
+.font-ls-3 {
+  letter-spacing: 3px;
+}
+
+.font-ls-4 {
+  letter-spacing: 4px;
+}
+
+.font-c-f {
+  color: #fff;
+}
+
+.font-c-e {
+  color: #eee;
+}
+
+.font-c-8 {
+  color: #888;
+}
+
+.font-c-7 {
+  color: #777;
+}
+
+.font-c-6 {
+  color: #666;
+}
+
+.font-c-5 {
+  color: #555;
+}
+
+.font-c-4 {
+  color: #444;
+}
+
+.font-c-1 {
+  color: #111;
+}
+
+.font-c-eld {
+  color: #f56c6c;
+}
+
+.font-c-elp {
+  color: #409eff;
+}
+
+.font-c-els {
+  color: #67c23a;
+}
+
+.font-c-elw {
+  color: #e6a23c;
+}
+
+.bg-c-eld {
+  background-color: #f56c6c;
+}
+
+.bg-c-elp {
+  background-color: #409eff;
+}
+
+.bg-c-els {
+  background-color: #67c23a;
+}
+
+.bg-c-elw {
+  background-color: #e6a23c;
+}
+
+.t-shdow-3 {
+  text-shadow: 3px 3px 3px #aaabac;
+}
+
+.t-shdow-3-1 {
+  text-shadow: 3px 3px 3px #dadbdc;
+}
+
+.t-shdow-2 {
+  text-shadow: 2px 2px 2px #aaabac;
+}
+
+.t-shdow-2-1 {
+  text-shadow: 0px 0px 2px #aaabac;
+}
+
+.t-shdow-2-2 {
+  text-shadow: 1px 1px 2px #aaabac;
+}
+
+.t-shdow-2-3 {
+  text-shadow: 2px 2px 2px #fdecec;
+}
+
+.t-shdow-1 {
+  text-shadow: 0px 0px 1px #aaabac;
+}

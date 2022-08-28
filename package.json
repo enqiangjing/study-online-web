@@ -1,0 +1,32 @@
+{
+  "name": "so-web-nuxt",
+  "version": "0.0.4",
+  "private": true,
+  "scripts": {
+    "nuxt": "nuxt",
+    "dev": "cross-env NODE_ENV=dev nuxt",
+    "buildtest": "cross-env NODE_ENV=test nuxt build",
+    "buildpro": "cross-env NODE_ENV=production nuxt build",
+    "starttest": "cross-env NODE_ENV=test nuxt start",
+    "startpro": "cross-env NODE_ENV=production nuxt start",
+    "gitea": "gulp gitea"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nuxt": "^2.15.8"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "cookieparser": "^0.1.0",
+    "cross-env": "^7.0.3",
+    "element-ui": "^2.15.6",
+    "gulp": "^4.0.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lodash": "^4.17.20",
+    "prettier": "^2.2.1",
+    "vue-infinite-scroll": "^2.0.2",
+    "wangeditor": "^4.6.15"
+  }
+}
